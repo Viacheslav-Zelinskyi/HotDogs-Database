@@ -1,16 +1,21 @@
 const express = require('express');
 const cors = require('cors');
-const client = require('./db')
+const path = require('path');
 const bodyParser = require('body-parser');
+const client = require('./db');
+require('dotenv').config();
+
 const jsonParser = bodyParser.json();
 const app = express();
-require('dotenv').config()
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
-
 client.connect();
+
+if ((process.env.NODE_ENV = 'production')) {
+	app.use(express.static(path.join(__dirname, 'client/build')));
+}
 
 app.get('/get_hotdog', function (req, res) {
 	client.query('SELECT * FROM hotdogs', (err, resp) => {
@@ -45,5 +50,5 @@ app.post('/edit_hotdog', jsonParser, function (req, res) {
 });
 
 app.listen(port, () => {
-	console.log('Started');
+	console.log(`Server started on port ${port}`);
 });

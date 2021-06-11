@@ -1,5 +1,5 @@
 export function getHotdogs(dispatch, setLoading) {
-	fetch('http://localhost:3005/get_hotdog')
+	fetch('/get_hotdog')
 		.then((response) => {
 			return response.json();
 		})
@@ -14,7 +14,7 @@ export function getHotdogs(dispatch, setLoading) {
 
 export async function deleteRecord(id) {
 	const data = { id: id };
-	fetch('http://localhost:3005/del_hotdog', {
+	fetch('/del_hotdog', {
 		headers: {
 			'Content-Type': 'application/json',
 		},
@@ -31,7 +31,7 @@ export function addHotdog(name, price, description, imageurl) {
 		description: description,
 		imageurl: imageurl,
 	};
-	fetch('http://localhost:3005/add_hotdog', {
+	fetch('/add_hotdog', {
 		headers: {
 			'Content-Type': 'application/json',
 		},
@@ -51,7 +51,7 @@ export function updateHotdog(id, name, price, description, imageurl) {
 		description: description,
 		imageurl: imageurl,
 	};
-	fetch('http://localhost:3005/edit_hotdog', {
+	fetch('/edit_hotdog', {
 		headers: {
 			'Content-Type': 'application/json',
 		},

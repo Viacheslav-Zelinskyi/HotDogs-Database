@@ -12,6 +12,7 @@
     "pg": "^8.6.0"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && yarn && yarn build"
   }
 }

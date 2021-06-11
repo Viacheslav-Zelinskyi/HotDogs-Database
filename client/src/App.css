@@ -1,0 +1,53 @@
+.header {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+	background-color: white;
+	border-bottom: 1px solid rgb(173, 173, 173);
+	box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+}
+
+.logo {
+	margin-left: 10%;
+	display: flex;
+	align-items: center;
+}
+
+.addButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10%;
+	width: 120px;
+	height: 40px;
+	border-radius: 8px;
+	background-color: rgb(50, 117, 175);
+	color: white;
+	cursor: pointer;
+}
+
+.addButton:hover {
+	background-color: rgb(92, 144, 190);
+}
+
+.listItem {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.itemContainer {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	padding-right: 10%;
+	padding-left: 10%;
+	padding-top: 100px;
+}
+
+.editBtn {
+	margin-top: 5px;
+}

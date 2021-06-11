@@ -1,0 +1,38 @@
+.card {
+	margin: 20px;
+	width: 330px;
+	height: 480px;
+	overflow: hidden;
+}
+
+.itemName {
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.price {
+	color: rgb(107, 107, 107);
+}
+
+.editBtn {
+	cursor: pointer;
+	border: none;
+	margin-left: 50px;
+	font-size: 18px;
+}
+
+.editBtn:hover {
+	color: rgb(163, 163, 163);
+}
+
+.editModeBtn {
+	margin-top: -10px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 19px;
+	font-weight: 500;
+}
+
+.editModeBtn:hover {
+	color: rgb(116, 116, 116);
+}

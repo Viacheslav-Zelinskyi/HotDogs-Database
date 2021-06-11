@@ -19,15 +19,18 @@ function App() {
 
 	const submitAddHotdog = (formData) => {
 		let canAdd = true;
-		store.getState().items.hotdogs.map((item) => {
+		for (let i = 0; i < store.getState().items.hotdogs.length; i++) {
+			let item = store.getState().items.hotdogs[i];
 			if (item.name === formData.name) {
 				canAdd = false;
 				setNameExist(true);
+				console.log(isNameExist);
+				break;
 			} else {
 				setNameExist(false);
 			}
-			return 0;
-		});
+		}
+
 		if (canAdd) addHotdog(formData.name, formData.price, formData.description, formData.imageurl);
 	};
 
